@@ -8,15 +8,34 @@ class LoginScreen extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: Column(
-        children: <Widget>[
-          Image.asset(
-            "assets/image02.jpg",
-            height: height.52
-            width: width,
-            fit: BoxFit.cover,
-          )
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            Image.asset(
+              "assets/image02.jpg",
+              height: height * 0.35,
+              width: width,
+              fit: BoxFit.cover,
+            ),
+            Container(
+              height: height * 0.50,
+              width: width,
+              color: Colors.orange,
+            ),
+            const Text(
+              "JPP Catering",
+              style: TextStyle(
+                  color: Color.fromARGB(255, 255, 196, 0),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
+            ),
+            const Text(
+              "path of teste",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            )
+          ],
+        ),
       ),
     );
   }
